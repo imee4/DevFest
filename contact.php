@@ -87,22 +87,55 @@
           </div>
         </div>
         <div class="row block-9">
+          <?php
+
+  // if (isset($_POST['save']))
+  // {
+    
+   // include "db_config.php";
+
+   //  $dbname = "dev_fest";
+   //  $name = $_POST['name'];
+   //  $email = $_POST['email'];
+   //  $subject = $_POST['subject'];
+   //  $message = $_POST['message'];
+
+
+   //  // Create connection
+   //  $conn = new mysqli($servername, $username, $password, $dbname);
+   //  // Check connection
+   //  if ($conn->connect_error) {
+   //    die("Connection failed: " . $conn->connect_error);
+   //  }
+
+   //  $sql = "INSERT INTO contact (name, email, subject, message)
+   //  VALUES ('" .  $name .  "', '" .  $email . "', '" .  $subject . "', '" .  $message . "')";
+
+   //  if ($conn->query($sql) === TRUE) {
+   //    echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:450px; justify-content: center;'><b>Your Message was Successfully Sent</b></div></center>";
+   //  } else {
+   //    echo "Error: " . $sql . "<br>" . $conn->error;
+   //  }
+
+   //  $conn->close();
+   //  }
+?>
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
+            <form action="http://127.0.0.1:8000/api/contact-us" method="post" class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" name="email" id="email"class="form-control" placeholder="Your Email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" name="save" id="save" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           

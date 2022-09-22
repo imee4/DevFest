@@ -89,29 +89,65 @@
 		</div>
 	</div>
 	<!--  --> 
+<?php
+
+	// if (isset($_POST['save']))
+	// {
+		
+	// 	include "db_config.php";
+
+	// 	$project_title = $_POST['project_title'];
+	// 	$project_description = $_POST['project_description'];
+	// 	$team = $_POST['team'];
+	// 	$leader = $_POST['leader'];
+	// 	$phone_number = $_POST['phone_number'];
+	// 	$email = $_POST['email'];
+
+
+	// 	// Create connection
+	// 	$conn = new mysqli($servername, $username, $password, $dbname);
+	// 	// Check connection
+	// 	if ($conn->connect_error) {
+	// 	  die("Connection failed: " . $conn->connect_error);
+	// 	}
+
+	// 	$sql = "INSERT INTO projects (project_title, project_description, team, leader, phone_number, email)
+	// 	VALUES ('" .  $project_title . "', '" .  $project_description . "', '" .  $team . "', '" .  $leader . "', '" .  $phone_number . "', '" .  $email . "')";
+
+	// 	if ($conn->query($sql) === TRUE) {
+	// 	  echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:500px; justify-content: center;'><b>Congrats, You Successfully Register your Project</b></div></center>";
+	// 	} else {
+	// 	  echo "Error: " . $sql . "<br>" . $conn->error;
+	// 	}
+
+	// 	$conn->close();
+	// 	}
+?>
+
 	<div class="container">
 		<div class="">
-		  <form action="#" class="bg-light p-5 contact-form">
+			https://gdgdevfirst.herokuapp.com/
+		  <form action="http://127.0.0.1:8000/api/project" method="post" class="bg-light p-5 contact-form">
 			<div class="form-group">
-			  <input type="text" class="form-control" placeholder="Team Leader">
+			  <input type="text" name="leader" id="leader" class="form-control" placeholder="Team Leader">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Team Name">
+				<input type="text" name="team" id="team" class="form-control" placeholder="Team Name">
 			  </div>
 			<div class="form-group">
-			  <input type="text" class="form-control" placeholder="Your Email">
+			  <input type="text" name="email" id="email" class="form-control" placeholder="Your Email">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Phone Number">
+				<input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="Phone Number">
 			  </div>
 			<div class="form-group">
-			  <input type="text" class="form-control" placeholder="Project Name">
+			  <input type="text" name="project_title" id="project_title" class="form-control" placeholder="Project Name">
 			</div>
 			<div class="form-group">
-			  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Project Description"></textarea>
+			  <textarea name="project_description" id="project_description" cols="30" rows="7" class="form-control" placeholder="Project Description"></textarea>
 			</div>
 			<div class="form-group">
-			  <input type="submit" value="Register" class="btn btn-primary py-3 px-5">
+			  <input type="submit" value="Register" id="save" name="save" class="btn btn-primary py-3 px-5">
 			</div>
 		  </form>
 		
