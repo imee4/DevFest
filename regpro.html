@@ -91,37 +91,37 @@
 	<!--  --> 
 <?php
 
-	// if (isset($_POST['save']))
-	// {
+	  if (isset($_POST['save']))
+	 {
 		
-	// 	include "db_config.php";
+	 	include "db_config.php";
 
-	// 	$project_title = $_POST['project_title'];
-	// 	$project_description = $_POST['project_description'];
-	// 	$team = $_POST['team'];
-	// 	$leader = $_POST['leader'];
-	// 	$phone_number = $_POST['phone_number'];
-	// 	$email = $_POST['email'];
+	 	$project_title = $_POST['project_title'];
+	 	$project_description = $_POST['project_description'];
+	 	$team = $_POST['team'];
+	 	$leader = $_POST['leader'];
+	 	$phone_number = $_POST['phone_number'];
+	 	$email = $_POST['email'];
 
 
-	// 	// Create connection
-	// 	$conn = new mysqli($servername, $username, $password, $dbname);
-	// 	// Check connection
-	// 	if ($conn->connect_error) {
-	// 	  die("Connection failed: " . $conn->connect_error);
-	// 	}
+	 	 Create connection
+	 	$conn = new mysqli($servername, $username, $password, $dbname);
+	 	 Check connection
+	 	if ($conn->connect_error) {
+	 	  die("Connection failed: " . $conn->connect_error);
+	 	}
 
-	// 	$sql = "INSERT INTO projects (project_title, project_description, team, leader, phone_number, email)
-	// 	VALUES ('" .  $project_title . "', '" .  $project_description . "', '" .  $team . "', '" .  $leader . "', '" .  $phone_number . "', '" .  $email . "')";
+	 	$sql = "INSERT INTO projects (project_title, project_description, team, leader, phone_number, email)
+	 	VALUES ('" .  $project_title . "', '" .  $project_description . "', '" .  $team . "', '" .  $leader . "', '" .  $phone_number . "', '" .  $email . "')";
 
-	// 	if ($conn->query($sql) === TRUE) {
-	// 	  echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:500px; justify-content: center;'><b>Congrats, You Successfully Register your Project</b></div></center>";
-	// 	} else {
-	// 	  echo "Error: " . $sql . "<br>" . $conn->error;
-	// 	}
+	 	if ($conn->query($sql) === TRUE) {
+	 	  echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:500px; justify-content: center;'><b>Congrats, You Successfully Register your Project</b></div></center>";
+	 	} else {
+	 	  echo "Error: " . $sql . "<br>" . $conn->error;
+	 	}
 
-	// 	$conn->close();
-	// 	}
+	 	$conn->close();
+	 	} 
 ?>
 
 	<div class="container">

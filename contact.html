@@ -89,36 +89,36 @@
         <div class="row block-9">
    <?php
 
-  // if (isset($_POST['save']))
-  // {
+   if (isset($_POST['save']))
+   {
     
-   // include "db_config.php";
+    include "db_config.php";
 
-   //  $dbname = "dev_fest";
-   //  $name = $_POST['name'];
-   //  $email = $_POST['email'];
-   //  $subject = $_POST['subject'];
-   //  $message = $_POST['message'];
+     $dbname = "dev_fest";
+     $name = $_POST['name'];
+     $email = $_POST['email'];
+     $subject = $_POST['subject'];
+     $message = $_POST['message'];
 
 
-   //  // Create connection
-   //  $conn = new mysqli($servername, $username, $password, $dbname);
-   //  // Check connection
-   //  if ($conn->connect_error) {
-   //    die("Connection failed: " . $conn->connect_error);
-   //  }
+      Create connection
+     $conn = new mysqli($servername, $username, $password, $dbname);
+      Check connection
+     if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+     }
 
-   //  $sql = "INSERT INTO contact (name, email, subject, message)
-   //  VALUES ('" .  $name .  "', '" .  $email . "', '" .  $subject . "', '" .  $message . "')";
+     $sql = "INSERT INTO contact (name, email, subject, message)
+     VALUES ('" .  $name .  "', '" .  $email . "', '" .  $subject . "', '" .  $message . "')";
 
-   //  if ($conn->query($sql) === TRUE) {
-   //    echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:450px; justify-content: center;'><b>Your Message was Successfully Sent</b></div></center>";
-   //  } else {
-   //    echo "Error: " . $sql . "<br>" . $conn->error;
-   //  }
+     if ($conn->query($sql) === TRUE) {
+       echo "<center><div class='card' style='background-color:blue; color: white; height: 40px; width:450px; justify-content: center;'><b>Your Message was Successfully Sent</b></div></center>";
+     } else {
+       echo "Error: " . $sql . "<br>" . $conn->error;
+     }
 
-   //  $conn->close();
-   //  }
+     $conn->close();
+     }
 ?>
           <div class="col-md-6 order-md-last d-flex">
             <form action="http://127.0.0.1:8000/api/contact-us" method="post" class="bg-light p-5 contact-form">
