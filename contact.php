@@ -43,8 +43,8 @@
             <li class="nav-item"><a href="speakers.html" class="nav-link" style=" color: white;">Speakers</a></li>
             <!-- <li class="nav-item"><a href="schedule.html" class="nav-link">Schedule</a></li> -->
             <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-            <li class="nav-item"><a href="contact.php" class="nav-link" style=" color: white;">Contact</a></li>
-            <li class="nav-item cta mr-md-2"><a href="regpro.php" class="nav-link">Register Your Project For DevFest</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link" style=" color: white;">Contact</a></li>
+            <li class="nav-item cta mr-md-2"><a href="regpro.html" class="nav-link">Register Your Project For DevFest</a></li>
   
           </ul>
         </div>
